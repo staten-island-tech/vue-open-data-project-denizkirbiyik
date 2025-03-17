@@ -1,5 +1,5 @@
 <template>
-  <DoughnutChart :data="[43, 453, 23, 54, 2]" />
+  <DoughnutChart :data="[43, 45, 23, 54, 29]" />
 </template>
 
 <script setup>

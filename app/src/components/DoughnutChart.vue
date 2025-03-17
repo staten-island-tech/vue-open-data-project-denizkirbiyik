@@ -15,7 +15,13 @@ const chartData = {
   datasets: [
     {
       data: props.data,
-      backgroundColor: ['rgb(255, 99, 132)', 'rgb(54, 162, 235)', 'rgb(255, 205, 86)'],
+      backgroundColor: [
+        'rgb(255, 99, 20)',
+        'rgb(54, 40, 100)',
+        'rgb(255, 205, 86)',
+        'rgb(46, 205, 86)',
+        'rgb(76, 205, 255)',
+      ],
     },
   ],
 }
