@@ -51,12 +51,4 @@ const chartOptions = {
     },
   },
 }
-
-watch(
-  () => props.data,
-  (newData) => {
-    chartData.value.datasets[0].data = newData
-  },
-  { immediate: true },
-)
 </script>
