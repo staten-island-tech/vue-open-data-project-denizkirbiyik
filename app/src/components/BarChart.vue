@@ -1,13 +1,13 @@
 <template>
-  <Doughnut id="my-chart-id" :options="chartOptions" :data="chartData" />
+  <Bar id="my-chart-id" :options="chartOptions" :data="chartData" />
 </template>
 
 <script setup>
 import { defineProps, watch, ref } from 'vue'
-import { Doughnut } from 'vue-chartjs'
-import { Chart as ChartJS, Title, Tooltip, Legend, CategoryScale, ArcElement } from 'chart.js'
+import { Bar } from 'vue-chartjs'
+import { Chart as ChartJS, Tooltip, BarElement, CategoryScale, LinearScale } from 'chart.js'
 
-ChartJS.register(Title, Tooltip, Legend, CategoryScale, ArcElement)
+ChartJS.register(Tooltip, BarElement, CategoryScale, LinearScale)
 const props = defineProps({
   data: Array,
   labels: Array,
@@ -29,6 +29,27 @@ const chartData = ref({
 })
 const chartOptions = {
   responsive: true,
+  scales: {
+    x: {
+      ticks: {
+        color: 'black',
+      },
+    },
+    y: {
+      ticks: {
+        color: 'black',
+      },
+    },
+  },
+  plugins: {
+    legend: {
+      display: false,
+    },
+    tooltip: {
+      bodyColor: 'white',
+      titleColor: 'white',
+    },
+  },
 }
 
 watch(
