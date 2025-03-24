@@ -33,6 +33,7 @@ onBeforeRouteUpdate((to) => {
 
 <template>
   <main>
+    <h1 class="text-3xl text-center text-black mb-8">Radiation Producing Equipment</h1>
     <TopHomeBar :curAmt="amt" :curOffset="offset" />
     <div class="flex flex-wrap justify-center">
       <MaterialCard v-for="place in data" :key="place.id" :data="place" />

@@ -3,7 +3,7 @@
 </template>
 
 <script setup>
-import { defineProps, watch, ref } from 'vue'
+import { watch, ref } from 'vue'
 import { Bar } from 'vue-chartjs'
 import { Chart as ChartJS, Tooltip, BarElement, CategoryScale, LinearScale } from 'chart.js'
 

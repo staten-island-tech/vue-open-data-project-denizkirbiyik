@@ -3,7 +3,7 @@
 </template>
 
 <script setup>
-import { defineProps, watch, ref } from 'vue'
+import { watch, ref } from 'vue'
 import { Doughnut } from 'vue-chartjs'
 import { Chart as ChartJS, Title, Tooltip, Legend, CategoryScale, ArcElement } from 'chart.js'
 
@@ -29,6 +29,17 @@ const chartData = ref({
 })
 const chartOptions = {
   responsive: true,
+  plugins: {
+    legend: {
+      labels: {
+        color: 'black',
+      },
+    },
+    tooltip: {
+      bodyColor: 'white',
+      titleColor: 'white',
+    },
+  },
 }
 
 watch(
